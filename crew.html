@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./dist/index.js" defer></script>
+  <script src="./dist/tabs.js" defer></script>
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body class="crew grid">
+  <header class="header flex">
+    <div class="logo">
+      <img src="./assets/shared/logo.svg" alt="">
+    </div>
+    <button class="nav-btn" type="button" aria-expanded="false" aria-controls="main-navigation">
+    </button>
+    <nav>
+      <ul id="main-navigation" class="navigation flex ff-sans-cond fs-300 letter-spacing-2">
+        <li><a href="./index.html" class="text-white"><span>00</span> Home</a></li>
+        <li><a href="./destination.html" class="text-white"><span>01</span> Destination</a></li>
+        <li class="active"><a href="./crew.html" class="text-white"><span>02</span> Crew</a></li>
+        <li><a href="./technology.html" class="text-white"><span>03</span> Technology</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="grid grid-crew">
+    <!-- Numbered Title -->
+    <h1 class="numbered-title fs-400 uppercase text-white ff-sans-cond fw-400 letter-spacing-2">
+      <span class="fw-700">02</span>Meet your crew
+    </h1>
+
+    <!-- Planet Images -->
+    <div class="tab-images">
+      <div class="tab-image" data-item="tabpanel-1">
+        <picture>
+          <source srcset="assets/crew/image-douglas-hurley.webp" type="image/webp">
+          <source srcset="assets/crew/image-douglas-hurley.png" type="image/png">
+          <img src="assets/crew/image-douglas-hurley.png" alt="An image of Douglas Hurley, the commander">
+        </picture>
+      </div>
+
+      <div class="tab-image hidden" data-item="tabpanel-2" >
+        <picture>
+          <source srcset="assets/crew/image-mark-shuttleworth.webp" type="image/webp">
+          <source srcset="assets/crew/image-mark-shuttleworth.png" type="image/png">
+          <img src="assets/crew/image-mark-shuttleworth.png" alt="An image of Mark Shuttleworth, the mission specialist" width="300">
+        </picture>
+      </div>
+
+      <div class="tab-image hidden" data-item="tabpanel-3">
+        <picture>
+          <source srcset="assets/crew/image-victor-glover.webp" type="image/webp">
+          <source srcset="assets/crew/image-victor-glover.png" type="image/png">
+          <img src="assets/crew/image-victor-glover.png" alt="An image of Victor Glover, the pilot">
+        </picture>
+      </div>
+      <div class="tab-image hidden" data-item="tabpanel-4">
+        <picture>
+          <source srcset="assets/crew/image-anousheh-ansari.webp" type="image/webp">
+          <source srcset="assets/crew/image-anousheh-ansari.png" type="image/png">
+          <img src="assets/crew/image-anousheh-ansari.png" alt="An image of Anousheh Ansari, the flight engineer">
+        </picture>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div id="tablist" role="tablist" class="tablist disc flex">
+      <button class="disc-tab-btn active" id="tab-1" type="button" role="tab" aria-selected="true" aria-controls="tabpanel-1" tabindex="0"></button>
+      <button class="disc-tab-btn" id="tab-2" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1"></button>
+      <button class="disc-tab-btn" id="tab-3" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-3" tabindex="-1"></button>
+      <button class="disc-tab-btn" id="tab-4" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-4" tabindex="-1"></button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div class="tab-contents">
+      <div class="tab-content " id="tabpanel-1" role="tabpanel" aria-labelledby="tab-1" data-item="tabpanel-1">
+        <h2 class="text-white-lighter uppercase text-accent-light ff-serif fs-300 fw-400">commander</h2>
+        <h3 class="text-white uppercase ff-serif fs-400 fw-400">Douglas Hurley</h3>
+        <p class="text-accent ff-sans-cond content">
+          Douglas Gerald Hurley is an American engineer,
+          former Marine Corps pilot and former NASA astronut. He launched into space for the third time as commander of Crew Dragon Demo-2.
+        </p>
+      </div>
+
+      <div class="tab-content hidden" id="tabpanel-2" role="tabpanel" aria-labelledby="tab-2" data-item="tabpanel-2">
+        <h2 class="text-white-lighter uppercase ff-serif fs-300 fw-400">Mission specialist</h2>
+        <h3 class="text-white uppercase text-accent-light ff-serif fs-400 fw-400">Mark Shuttleworth</h3>
+        <p class="text-accent ff-sans-cond content">
+          Mark Richard Shuttleworth is the founder and CEO of Canonical. the company behind the Linux-based Ubuntu operation system. Shuttleworth became the first South African to travel to space as a space tourist.
+        </p>
+      </div>
+
+      <div class="tab-content hidden" id="tabpanel-3" role="tabpanel" aria-labelledby="tab-3" data-item="tabpanel-3">
+        <h2 class="text-white-lighter uppercase text-accent-light ff-serif fs-300 fw-400">Pilot</h2>
+        <h3 class="text-white uppercase ff-serif fs-400 fw-400">Victor Glover</h3>
+        <p class="text-accent ff-sans-cond content">
+          Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where the pilots on F/A-18. He was a crew member of Expedition 64, and served as station systems flight engineer.
+        </p>
+      </div>
+
+      <div class="tab-content hidden" id="tabpanel-4" role="tabpanel" aria-labelledby="tab-4" data-item="tabpanel-4">
+        <h2 class="text-white-lighter uppercase text-accent-light ff-serif fs-300 fw-400">Flight Engineer</h2>
+        <h3 class="text-white uppercase ff-serif fs-400 fw-400">Anousheh Ansari</h3>
+        <p class="text-accent ff-sans-cond">
+          Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.
+        </p>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>
