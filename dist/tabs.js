@@ -1,7 +1,7 @@
 "use strict";
 const tablist = document.getElementById('tablist');
 const tabContents = document.querySelector('.tab-contents');
-const tabImages = document.querySelector('.tab-images');
+const tabImages = document.querySelector('[data-id="tab-images"]');
 ;
 tablist.addEventListener('click', onClickEvent);
 tablist.addEventListener('keydown', onkeydownEvent);
@@ -9,7 +9,7 @@ function onClickEvent(event) {
     let newTab = event.target;
     if (newTab.tagName != 'BUTTON')
         return;
-    let tabs = tablist.querySelectorAll('.tab-btn, .disc-tab-btn');
+    let tabs = tablist.querySelectorAll('.tab-btn, .disc-tab-btn, .numbered-tab-btn');
     let tabContentList = tabContents.querySelectorAll('.tab-content');
     let tabImagesList = tabImages.querySelectorAll('.tab-image');
     changeTab(newTab, tabs);

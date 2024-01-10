@@ -1,6 +1,6 @@
 const tablist = document.getElementById('tablist') as HTMLDivElement;
 const tabContents = document.querySelector('.tab-contents') as HTMLDivElement;
-const tabImages = document.querySelector('.tab-images') as HTMLDivElement;
+const tabImages = document.querySelector('[data-id="tab-images"]') as HTMLDivElement;
 
 interface TabProps {
   item: string,
@@ -15,7 +15,7 @@ function onClickEvent(event: MouseEvent) {
   let newTab = event.target as HTMLButtonElement;
   if (newTab.tagName != 'BUTTON') return;
 
-  let tabs = tablist.querySelectorAll('.tab-btn, .disc-tab-btn') as NodeListOf<HTMLButtonElement>;
+  let tabs = tablist.querySelectorAll('.tab-btn, .disc-tab-btn, .numbered-tab-btn') as NodeListOf<HTMLButtonElement>;
   let tabContentList = tabContents.querySelectorAll('.tab-content') as NodeListOf<HTMLDivElement>;
   let tabImagesList = tabImages.querySelectorAll('.tab-image') as NodeListOf<HTMLDivElement>;
 
