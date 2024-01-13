@@ -2,7 +2,8 @@ const navBtn = document.querySelector('.nav-btn') as HTMLButtonElement;
 navBtn.addEventListener('click', showNav);
 
 function showNav({target}: MouseEvent) {
-  let btn = target as HTMLButtonElement;
+  let btn = (target as HTMLElement).closest('button') as HTMLButtonElement;
+  if (btn != navBtn) return;
   let isFalse = btn.getAttribute('aria-expanded') == 'false';
 
   if (isFalse) {

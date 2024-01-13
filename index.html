@@ -15,11 +15,15 @@
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body class="home grid">
+  <a href="#main" class="skip-link ff-sans-cond text-dark bg-white">Skip to main content</a>
   <header class="header flex">
     <div class="logo">
       <img src="./assets/shared/logo.svg" alt="">
     </div>
-    <button class="nav-btn" type="button" aria-expanded="false" aria-controls="main-navigation">
+    <button class="nav-btn" type="button" aria-label="menu button" aria-expanded="false" aria-controls="main-navigation">
+      <div></div>
+      <div></div>
+      <div></div>
     </button>
     <nav>
       <ul id="main-navigation" class="navigation flex ff-sans-cond fs-200 letter-spacing-2">
@@ -30,7 +34,7 @@
       </ul>
     </nav>
   </header>
-  <main class="grid grid-home">
+  <main id="main" class="grid grid-home">
     <!-- Intro Section -->
     <div class="intro text-accent">
       <h1 class="ff-sans-cond uppercase fs-400 fw-400">
