@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./dist/index.js" defer></script>
-  <title>Frontend Mentor | Space tourism website</title>
+	<link rel="stylesheet" href="./styles.css">
+	<script src="./dist/index.js" defer></script>
+	<title>Frontend Mentor | Space tourism website</title>
 </head>
 <body class="home grid">
-  <a href="#main" class="skip-link ff-sans-cond text-dark bg-white">Skip to main content</a>
-  <header class="header flex">
-    <div class="logo">
-      <img src="./assets/shared/logo.svg" alt="">
-    </div>
-    <button class="nav-btn" type="button" aria-label="menu button" aria-expanded="false" aria-controls="main-navigation">
-      <div></div>
-      <div></div>
-      <div></div>
-    </button>
-    <nav>
-      <ul id="main-navigation" class="navigation flex ff-sans-cond fs-200 letter-spacing-2">
-        <li class="active"><a href="./index.html" class="text-white"><span>00</span> Home</a></li>
-        <li><a href="./destination.html" class="text-white"><span>01</span> Destination</a></li>
-        <li><a href="./crew.html" class="text-white"><span>02</span> Crew</a></li>
-        <li><a href="./technology.html" class="text-white"><span>03</span> Technology</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main id="main" class="grid grid-home">
-    <!-- Intro Section -->
-    <div class="intro text-accent">
-      <h1 class="ff-sans-cond uppercase fs-400 fw-400">
-        So, you want to travel to <span class="ff-serif text-white d-block fs-700">Space</span>
-      </h1>
-      <p class="ff-sans-cond">
-        Let’s face it; if you want to go to space, you might as well genuinely go to
-        outer space and not hover kind of on the edge of it. Well sit back, and relax
-        because we’ll give you a truly out of this world experience!
-      </p>
-    </div>
+	<a href="#main" class="skip-link ff-sans-cond text-dark bg-white">Skip to main content</a>
+	<header class="header flex">
+		<div class="logo">
+			<img src="./assets/shared/logo.svg" alt="">
+		</div>
+		<button class="nav-btn" type="button" aria-label="menu button" aria-expanded="false" aria-controls="main-navigation">
+			<div></div>
+			<div></div>
+			<div></div>
+		</button>
+		<nav>
+			<ul id="main-navigation" class="navigation flex ff-sans-cond fs-200 letter-spacing-2">
+				<li class="active"><a href="./index.html" class="text-white"><span>00</span> Home</a></li>
+				<li><a href="./destination.html" class="text-white"><span>01</span> Destination</a></li>
+				<li><a href="./crew.html" class="text-white"><span>02</span> Crew</a></li>
+				<li><a href="./technology.html" class="text-white"><span>03</span> Technology</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main id="main" class="grid grid-home">
+		<!-- Intro Section -->
+		<div class="intro text-accent">
+			<h1 class="ff-sans-cond uppercase fs-400 fw-400">
+				So, you want to travel to <span class="ff-serif text-white d-block fs-700">Space</span>
+			</h1>
+			<p class="ff-sans-cond">
+				Let’s face it; if you want to go to space, you might as well genuinely go to
+				outer space and not hover kind of on the edge of it. Well sit back, and relax
+				because we’ll give you a truly out of this world experience!
+			</p>
+		</div>
 
-    <!--Explore Button -->
-    <div class="explore">
-      <a href="./destination.html" class="explore-btn text-dark bg-white uppercase flex">
-        Explore
-      </a>
-    </div>
-  </main>
+		<!--Explore Button -->
+		<div class="explore">
+			<a href="./destination.html" class="explore-btn text-dark bg-white uppercase flex">
+				Explore
+			</a>
+		</div>
+	</main>
+	<div class="loader-screen">
+		<div class="loader"></div>
+	</div>
 </body>
 </html>

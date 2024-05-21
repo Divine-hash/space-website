@@ -1,5 +1,8 @@
 const navBtn = document.querySelector('.nav-btn') as HTMLButtonElement;
+const loaderScreen = document.querySelector('.loader-screen') as HTMLElement;
+
 navBtn.addEventListener('click', showNav);
+window.addEventListener('load', () => loaderScreen.classList.add('hide'));
 
 function showNav({target}: MouseEvent) {
   let btn = (target as HTMLElement).closest('button') as HTMLButtonElement;

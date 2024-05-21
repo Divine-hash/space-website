@@ -9,6 +9,8 @@
   --clr-light: 231 77% 90%;
   --clr-white: 0 0% 100%;
 
+  --dark: hsl(230 35% 7%);
+  --light: hsl(231 77% 90%);
   /* font sizes */
   --fs-700: calc(100rem / 16);
   --fs-600: calc(56rem / 16);
@@ -103,6 +105,36 @@ body {
 
 .active {
   border-block-end: 3px solid hsl( var(--clr-white) );
+}
+
+.loader-screen {
+  position: fixed;
+  inset: 0;
+  background: hsl(var(--clr-dark));
+  display: grid;
+  place-items: center;
+  transition: opacity .4s ease-in-out, visibility .4ms ease-in-out;
+  z-index: 999;
+}
+
+.loader-screen .loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border: 5px solid hsl(var(--clr-light));
+  border-block-start-color: hsl( var(--clr-white) );
+  border-radius: 50%;
+  animation: rotate 800ms linear infinite;
+}
+
+.loader-screen.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .d-block { display: block }

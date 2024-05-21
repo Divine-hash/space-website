@@ -1,6 +1,8 @@
 "use strict";
 const navBtn = document.querySelector('.nav-btn');
+const loaderScreen = document.querySelector('.loader-screen');
 navBtn.addEventListener('click', showNav);
+window.addEventListener('load', () => loaderScreen.classList.add('hide'));
 function showNav({ target }) {
     let btn = target.closest('button');
     if (btn != navBtn)

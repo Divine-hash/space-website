@@ -3,9 +3,9 @@ const tabContents = document.querySelector('.tab-contents') as HTMLDivElement;
 const tabImages = document.querySelector('[data-id="tab-images"]') as HTMLDivElement;
 
 interface TabProps {
-  item: string,
+  item:       string,
   elemParent: HTMLDivElement,
-  elemList: NodeListOf<HTMLDivElement>
+  elemList:   NodeListOf<HTMLDivElement>
 };
 
 tablist.addEventListener('click', onClickEvent);
@@ -21,15 +21,15 @@ function onClickEvent(event: MouseEvent) {
 
   changeTab(newTab, tabs);
   changeTabDisplay({
-    item: newTab.getAttribute('aria-controls') as string,
+    item:       newTab.getAttribute('aria-controls') as string,
     elemParent: tabContents,
-    elemList: tabContentList
+    elemList:   tabContentList
   });
 
   changeTabDisplay({
-    item: newTab.getAttribute('aria-controls') as string,
+    item:       newTab.getAttribute('aria-controls') as string,
     elemParent: tabImages,
-    elemList: tabImagesList
+    elemList:   tabImagesList
   });
 }
 
